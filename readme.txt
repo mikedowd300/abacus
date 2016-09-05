@@ -5,3 +5,5 @@ In "challenge mode" there are levels of difficulty for addtion, addition with su
 As of 9/5/2016 the abacus does not have a functional demo mode and the challenge mode only consists of addition, but testing on it has gove well and the other challenges can be added with minimal programming.
 
 The demo modes, as imagined by this developer, will not be videos, but rather a series of $jQuery timeouts that highlight parts of the abacus while text in a modal div explains step by step what is going on.
+
+Feel free to contact me with insight or questions @ mikedowd1972@gmail.com
