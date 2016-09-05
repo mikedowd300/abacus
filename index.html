@@ -1,0 +1,276 @@
+<!DOCTYPE.html>
+<html>
+  <head>
+    <title>Abacus</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">    
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+		<nav class="navbar navbar-light bg-faded">
+		  <ul class="nav navbar-nav">
+		    <li class="nav-item active">
+		      <h3 class="nav-label" onclick="counter()">Counting</h1>
+		    </li>
+		    <li class="nav-item">
+		      <h3 class="nav-label" onclick="doAddFormat()">Addition</h1>
+		    </li>
+		    <li class="nav-item">
+		      <h3 class="nav-label">Add and Subtract</h2>
+		    </li>
+		    <li class="nav-item">
+		      <h3 class="nav-label">Multiply</h2>
+		    </li>
+		    <li class="nav-item">
+		      <h3 class="nav-label">Divide</h2>
+		    </li>
+		  </ul>		
+		</nav>
+		<div class="container page-body">
+	  	<div class="abacus">
+	  		<div class="abacus-top container">
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead five down" onclick="slideBead($(this),11,5)" >
+	  				</div>
+	  			</div>
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead five down" onclick="slideBead($(this),10,5)" >
+	  				</div>
+	  			</div>
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead five down" onclick="slideBead($(this),9,5)">
+	  				<!-- the parameters for slideBead are: the element, the amount of zeros to be added to the value, the value -->	  					
+	  				</div>
+	  			</div>
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead five down" onclick="slideBead($(this),8,5)" >
+	  				</div>
+	  			</div>
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead five down" onclick="slideBead($(this),7,5)" >
+	  				</div>
+	  			</div>
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead five down" onclick="slideBead($(this),6,5)" >
+	  				</div>
+	  			</div>
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead five down" onclick="slideBead($(this),5,5)" >
+	  				</div>
+	  			</div>
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead five down" onclick="slideBead($(this),4,5)" >
+	  				</div>
+	  			</div>
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead five down" onclick="slideBead($(this),3,5)" >
+	  				</div>
+	  			</div>
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead five down" onclick="slideBead($(this),2,5)" >
+	  				</div>
+	  			</div>
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead five down" onclick="slideBead($(this),1,5)" >
+	  				</div>
+	  			</div>
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead five down" onclick="slideBead($(this),0,5)" >
+	  				</div>
+	  			</div>
+	  		</div>	
+	  		<div class="container abacus-bottom">
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead one down" onclick="slideBead($(this),11,1)">
+	  				</div>
+	  				<div class="bead two down" onclick="slideBead($(this),11,1)">
+	  				</div>
+	  				<div class="bead three down" onclick="slideBead($(this),11,1)">
+	  				</div>
+	  				<div class="bead four down" onclick="slideBead($(this),11,1)">
+	  				</div>
+	  			</div>
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead one down" onclick="slideBead($(this),10,1)">
+	  				</div>
+	  				<div class="bead two down" onclick="slideBead($(this),10,1)">
+	  				</div>
+	  				<div class="bead three down" onclick="slideBead($(this),10,1)">
+	  				</div>
+	  				<div class="bead four down" onclick="slideBead($(this),10,1)">
+	  				</div>
+	  			</div>
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead one down" onclick="slideBead($(this),9,1)">
+	  				</div>
+	  				<div class="bead two down" onclick="slideBead($(this),9,1)">
+	  				</div>
+	  				<div class="bead three down" onclick="slideBead($(this),9,1)">
+	  				</div>
+	  				<div class="bead four down" onclick="slideBead($(this),9,1)">
+	  				</div>
+	  			</div>
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead one down" onclick="slideBead($(this),8,1)">
+	  				</div>
+	  				<div class="bead two down" onclick="slideBead($(this),8,1)">
+	  				</div>
+	  				<div class="bead three down" onclick="slideBead($(this),8,1)">
+	  				</div>
+	  				<div class="bead four down" onclick="slideBead($(this),8,1)">
+	  				</div>
+	  			</div>
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead one down" onclick="slideBead($(this),7,1)">
+	  				</div>
+	  				<div class="bead two down" onclick="slideBead($(this),7,1)">
+	  				</div>
+	  				<div class="bead three down" onclick="slideBead($(this),7,1)">
+	  				</div>
+	  				<div class="bead four down" onclick="slideBead($(this),7,1)">
+	  				</div>
+	  			</div>
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead one down" onclick="slideBead($(this),6,1)">
+	  				</div>
+	  				<div class="bead two down" onclick="slideBead($(this),6,1)">
+	  				</div>
+	  				<div class="bead three down" onclick="slideBead($(this),6,1)">
+	  				</div>
+	  				<div class="bead four down" onclick="slideBead($(this),6,1)">
+	  				</div>
+	  			</div>
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead one down" onclick="slideBead($(this),5,1)">
+	  				</div>
+	  				<div class="bead two down" onclick="slideBead($(this),5,1)">
+	  				</div>
+	  				<div class="bead three down" onclick="slideBead($(this),5,1)">
+	  				</div>
+	  				<div class="bead four down" onclick="slideBead($(this),5,1)">
+	  				</div>
+	  			</div>
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead one down" onclick="slideBead($(this),4,1)">
+	  				</div>
+	  				<div class="bead two down" onclick="slideBead($(this),4,1)">
+	  				</div>
+	  				<div class="bead three down" onclick="slideBead($(this),4,1)">
+	  				</div>
+	  				<div class="bead four down" onclick="slideBead($(this),4,1)">
+	  				</div>
+	  			</div>
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead one down" onclick="slideBead($(this),3,1)">
+	  				</div>
+	  				<div class="bead two down" onclick="slideBead($(this),3,1)">
+	  				</div>
+	  				<div class="bead three down" onclick="slideBead($(this),3,1)">
+	  				</div>
+	  				<div class="bead four down" onclick="slideBead($(this),3,1)">
+	  				</div>
+	  			</div>
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead one down" onclick="slideBead($(this),2,1)">
+	  				</div>
+	  				<div class="bead two down" onclick="slideBead($(this),2,1)">
+	  				</div>
+	  				<div class="bead three down" onclick="slideBead($(this),2,1)">
+	  				</div>
+	  				<div class="bead four down" onclick="slideBead($(this),2,1)">
+	  				</div>
+	  			</div>
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead one down" onclick="slideBead($(this),1,1)">
+	  				</div>
+	  				<div class="bead two down" onclick="slideBead($(this),1,1)">
+	  				</div>
+	  				<div class="bead three down" onclick="slideBead($(this),1,1)">
+	  				</div>
+	  				<div class="bead four down" onclick="slideBead($(this),1,1)">
+	  				</div>
+	  			</div>
+	  			<div class="acol col-xs-1">
+	  				<div class="open">
+	  				</div>
+	  				<div class="bead one down" onclick="slideBead($(this),0,1)">
+	  				</div>
+	  				<div class="bead two down" onclick="slideBead($(this),0,1)">
+	  				</div>
+	  				<div class="bead three down" onclick="slideBead($(this),0,1)">
+	  				</div>
+	  				<div class="bead four down" onclick="slideBead($(this),0,1)">
+	  				</div>	  			
+	  			</div>
+	  		</div> 
+			</div> <!-- abacus -->
+			<div id="display" class="container hidden">
+				<div class="col-xs-4 add-these">
+					<p id="num1" class='number hidden'></p>				
+					<p id="num2" class='number hidden'></p>
+					<p id="num3" class='number hidden'></p>
+					<p id="num4" class='number hidden'></p>
+					<p id="num5" class='number hidden'></p>
+				</div>
+				<div class="col-xs-5 results">
+					<p id="UserAnsLabel" class="hidden">Your Answer</p>
+					<p id="usersValue" class="hidden"></p>
+					<p id="ansLabel" class="hidden">My Answer</p>
+					<p id="actualValue" class="hidden"></p>
+					<p id='message' class="hidden"></p>
+				</div>
+				<div class="col-xs-3 my-buttons">
+					<button onclick="getNumbers()" id="nextProblem" class="hidden">Next</button>				
+					<button onclick="doSubmit()" id="submitButton" class="hidden">Submit</button>
+				<div>
+			</div>
+	  </div>  <!-- abacus-body --> 
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="app.js"></script>      
+  </body>
+</html>
