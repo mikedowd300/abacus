@@ -25,6 +25,8 @@ function counter() {
 	$('.my-buttons').fadeOut(1000);
 	$('.abacus').css('margin-top', '30px');
 	$('#display').css('width','40%').css('height', '35px').css('background-color','rgba(22,255,111,.2)').fadeOut(1000);
+	$("#actualValue").fadeIn(1000);
+
 }
 
 function setBools(op) {
